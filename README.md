@@ -1,0 +1,1 @@
+# Esse projeto utiliza o evoluition API para criar um chatbot para o whatsapp
