@@ -6,5 +6,5 @@ from config import REDIS_URL
 def get_session_history(session_id):
     return RedisChatMessageHistory(
         session_id=session_id,
-        redis_url=REDIS_URL,
+        url=REDIS_URL,
     )
