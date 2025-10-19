@@ -8,6 +8,7 @@ from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from config import RAG_FILES_DIR, VECTOR_STORE_PATH
+from logger import logger
 
 embedding = FastEmbedEmbeddings(model_name="BAAI/bge-base-en-v1.5")
 
@@ -27,6 +28,7 @@ def load_documents() -> List[DocumentProtocol]:
         for f in os.listdir(RAG_FILES_DIR)
         if f.endswith((".pdf") or f.endswith(".txt"))
     ]
+    logger.info("Arquivos para vetorização encontrados: {}", files)
 
     for file in files:
         loader = (
@@ -41,6 +43,7 @@ def load_documents() -> List[DocumentProtocol]:
 
 def get_vectorstore() -> Chroma:
     docs: List[DocumentProtocol] = load_documents()
+    logger.info("Número de documentos carregados: {}", len(docs))
     if docs:
         text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=1000,
@@ -48,12 +51,15 @@ def get_vectorstore() -> Chroma:
         )
 
         splits = text_splitter.split_documents(docs)
-        return Chroma.from_documents(
+        chroma = Chroma.from_documents(
             documents=splits,
             embedding=embedding,
             persist_directory=VECTOR_STORE_PATH,
         )
+        logger.info("Chroma persistido em {}", VECTOR_STORE_PATH)
+        return chroma
 
+    logger.info("Inicializando Chroma vazio em {}", VECTOR_STORE_PATH)
     return Chroma(
         embedding_function=embedding,
         persist_directory=VECTOR_STORE_PATH,

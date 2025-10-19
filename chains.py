@@ -9,6 +9,7 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_groq import ChatGroq
 
 from config import GROQ_MODEL_NAME, GROQ_MODEL_TEMPERATURE
+from logger import logger
 from memory import get_session_history
 from prompts import contextualize_prompt, qa_prompt
 from vectorstore import get_vectorstore
@@ -28,7 +29,9 @@ def get_rag_chain() -> object:
         llm=llm,
         prompt=qa_prompt,
     )
-    return create_retrieval_chain(history_aware_chain, question_answer_chain)
+    chain = create_retrieval_chain(history_aware_chain, question_answer_chain)
+    logger.info("RAG chain criado com LLM={}", GROQ_MODEL_NAME)
+    return chain
 
 
 def get_conversational_rag_chain() -> RunnableWithMessageHistory:
