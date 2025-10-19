@@ -14,7 +14,7 @@ from prompts import contextualize_prompt, qa_prompt
 from vectorstore import get_vectorstore
 
 
-def get_rag_chain():
+def get_rag_chain() -> object:
     llm = ChatGroq(
         model=GROQ_MODEL_NAME,
         temperature=GROQ_MODEL_TEMPERATURE,
@@ -31,8 +31,8 @@ def get_rag_chain():
     return create_retrieval_chain(history_aware_chain, question_answer_chain)
 
 
-def get_conversational_rag_chain():
-    rag_chain = get_rag_chain()
+def get_conversational_rag_chain() -> RunnableWithMessageHistory:
+    rag_chain: object = get_rag_chain()
     return RunnableWithMessageHistory(
         runnable=rag_chain,
         get_session_history=get_session_history,

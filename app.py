@@ -1,3 +1,5 @@
+from typing import Dict, Optional
+
 from fastapi import FastAPI, Request
 
 from chains import get_conversational_rag_chain
@@ -9,14 +11,17 @@ conversational_rag_chain = get_conversational_rag_chain()
 
 
 @app.post("/webhook")
-async def webhook(request: Request):
-    data = await request.json()
-    chat_id = data.get("data").get("key").get("remoteJid")
-    from_me = data.get("data").get("key").get("fromMe")
-    message = data.get("data").get("message").get("conversation")
+async def webhook(request: Request) -> Dict[str, object]:
+    data: Dict[str, object] = await request.json()
+    # estrutura esperada do webhook: data.data.key.remoteJid, data.data.key.fromMe, data.data.message.conversation
+    chat_id: Optional[str] = data.get("data").get("key").get("remoteJid")
+    from_me: Optional[bool] = data.get("data").get("key").get("fromMe")
+    message: Optional[str] = (
+        data.get("data").get("message").get("conversation")
+    )
 
     if chat_id and message and from_me and "@g.us" not in chat_id:
-        ai_response = conversational_rag_chain.invoke(
+        ai_response: str = conversational_rag_chain.invoke(
             input={"input": message},
             config={"configurable": {"session_id": chat_id}},
         )["answer"]
