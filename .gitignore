@@ -11,3 +11,5 @@ wheels/
 .env
 
 vectorstore_data/
+rag_files/
+log/
