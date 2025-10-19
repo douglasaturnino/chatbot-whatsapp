@@ -1,3 +1,10 @@
+"""Carregamento de documentos, preparação e inicialização do Chroma.
+
+Este módulo procura arquivos em `RAG_FILES_DIR`, carrega PDFs e textos,
+gera splits e persiste/recupera o Chroma vectorstore usando
+FastEmbedEmbeddings.
+"""
+
 import os
 import shutil
 from typing import List, Protocol
@@ -19,6 +26,16 @@ class DocumentProtocol(Protocol):
 
 
 def load_documents() -> List[DocumentProtocol]:
+    """Carrega documentos a partir de `RAG_FILES_DIR`.
+
+    - Procura por arquivos `.pdf` e `.txt` em `RAG_FILES_DIR`.
+    - Carrega o conteúdo em objetos compatíveis com DocumentProtocol.
+    - Move os arquivos processados para a subpasta `processed`.
+
+    Returns:
+        List[DocumentProtocol]: lista de documentos carregados.
+    """
+
     docs: List[DocumentProtocol] = []
 
     processed_dir: str = os.path.join(RAG_FILES_DIR, "processed")
@@ -42,6 +59,17 @@ def load_documents() -> List[DocumentProtocol]:
 
 
 def get_vectorstore() -> Chroma:
+    """Inicializa ou carrega o Chroma vectorstore.
+
+    - Se existirem documentos novos em `RAG_FILES_DIR`, carrega-os e cria
+      embeddings, persistindo-os em `VECTOR_STORE_PATH`.
+    - Caso contrário, inicializa um Chroma vazio apontando para
+      `VECTOR_STORE_PATH`.
+
+    Returns:
+        Chroma: instância do vectorstore pronta para uso.
+    """
+
     docs: List[DocumentProtocol] = load_documents()
     logger.info("Número de documentos carregados: {}", len(docs))
     if docs:

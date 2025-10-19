@@ -1,3 +1,10 @@
+"""Construção dos chains RAG usados pelo bot.
+
+Este módulo cria o retriever (Chroma) e combina com um LLM (ChatGroq) para
+montar o fluxo de RAG que responde às consultas do usuário, preservando o
+histórico de mensagens por sessão.
+"""
+
 from langchain_classic.chains import (
     create_history_aware_retriever,
     create_retrieval_chain,
@@ -16,6 +23,16 @@ from vectorstore import get_vectorstore
 
 
 def get_rag_chain() -> object:
+    """Cria e retorna o chain básico de RAG.
+
+    O chain combina o LLM ChatGroq com um retriever (Chroma) e dois
+    componentes principais: um history-aware retriever e uma cadeia de
+    resposta (stuff documents).
+
+    Returns:
+        object: Chain pronto para ser usado pelo fluxo de recuperação + QA.
+    """
+
     llm = ChatGroq(
         model=GROQ_MODEL_NAME,
         temperature=GROQ_MODEL_TEMPERATURE,
@@ -35,6 +52,15 @@ def get_rag_chain() -> object:
 
 
 def get_conversational_rag_chain() -> RunnableWithMessageHistory:
+    """Retorna um RunnableWithMessageHistory que envolve o chain RAG.
+
+    Esse wrapper preserva e injeta o histórico de mensagens por sessão quando
+    o chain é executado, permitindo conversas stateful por `session_id`.
+
+    Returns:
+        RunnableWithMessageHistory: runnable que gerencia histórico por sessão.
+    """
+
     rag_chain: object = get_rag_chain()
     return RunnableWithMessageHistory(
         runnable=rag_chain,

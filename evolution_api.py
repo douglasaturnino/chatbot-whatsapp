@@ -36,4 +36,4 @@ def send_whatsapp_message(number: str, text: str) -> None:
     try:
         requests.post(url, json=payload, headers=headers)
     except Exception as e:
-        logger.exception("Erro ao enviar mensagem via EvolutionAPI: %s", e)
+        logger.exception("Erro ao enviar mensagem via EvolutionAPI: {}", e)

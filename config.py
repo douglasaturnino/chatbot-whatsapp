@@ -1,3 +1,9 @@
+"""Carrega e expõe as variáveis de ambiente usadas pelo projeto.
+
+As variáveis são carregadas via python-dotenv (`.env`) e exportadas como
+variáveis de módulo para uso em outros pontos do código.
+"""
+
 import os
 from typing import Optional
 
