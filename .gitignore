@@ -13,3 +13,4 @@ wheels/
 vectorstore_data/
 rag_files/
 log/
+site/

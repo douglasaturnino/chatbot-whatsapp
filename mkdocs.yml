@@ -1,0 +1,28 @@
+site_name: Chatbot WhatsApp
+theme:
+  name: material
+  features:
+    - navigation.top
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            show_root_heading: true
+  - gen-files:
+      scripts:
+        - docs/gen_home_page.py
+
+nav:
+  - index.md
+  - app.md 
