@@ -1,0 +1,32 @@
+# Ignorar o ambiente virtual Python
+.venv/
+env/
+venv/
+
+# Ignorar arquivos de log
+log/
+*.log
+*.log.zip
+
+# Ignorar arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar arquivos de banco/dados locais
+vectorstore_data/
+*.sqlite3
+
+# Ignorar arquivos específicos de desenvolvimento
+rag_files/
+
+# Ignorar arquivos de lock do poetry/pip (caso não estejam sendo usados)
+uv.lock
+
+# Ignorar arquivos ocultos de VCS ou editores (opcional)
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
+.git/
