@@ -1,0 +1,711 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="app/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Chatbot WhatsApp</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chatbot-ia-para-whatsapp-evolutionapi-langchain" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Chatbot WhatsApp" class="md-header__button md-logo" aria-label="Chatbot WhatsApp" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chatbot WhatsApp
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chatbot IA para WhatsApp (EvolutionAPI + LangChain)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Chatbot WhatsApp" class="md-nav__button md-logo" aria-label="Chatbot WhatsApp" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Chatbot WhatsApp
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chatbot IA para WhatsApp (EvolutionAPI + LangChain)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chatbot IA para WhatsApp (EvolutionAPI + LangChain)
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sumário
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Pré-requisitos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Variáveis de ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-executar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Como executar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adicionar-documentos-para-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Adicionar documentos para RAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-modelos-e-recomendacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Modelos e recomendações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estrutura-importante-de-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Estrutura importante de arquivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-troubleshooting-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Troubleshooting / notas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-como-contribuir" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Como contribuir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-resumo-rapido-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Resumo rápido (cheat sheet)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sumário
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-pre-requisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Pré-requisitos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Variáveis de ambiente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-executar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Como executar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adicionar-documentos-para-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Adicionar documentos para RAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-modelos-e-recomendacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Modelos e recomendações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estrutura-importante-de-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Estrutura importante de arquivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-troubleshooting-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Troubleshooting / notas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-como-contribuir" class="md-nav__link">
+    <span class="md-ellipsis">
+      8) Como contribuir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-resumo-rapido-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      9) Resumo rápido (cheat sheet)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chatbot-ia-para-whatsapp-evolutionapi-langchain">Chatbot IA para WhatsApp (EvolutionAPI + LangChain)</h1>
+<p>Este repositório contém um chatbot para WhatsApp que integra:</p>
+<ul>
+<li>EvolutionAPI (painel + gateway para WhatsApp)</li>
+<li>FastAPI para expor o webhook e endpoints</li>
+<li>LangChain (Fluxos RAG) para recuperar documentos e conversar com LLMs</li>
+<li>Chroma para persistência de vetores</li>
+<li>Modelos Groq (ChatGroq) para LLM e FastEmbed/BGE para embeddings</li>
+<li>Docker / Docker Compose para facilitar deploy</li>
+</ul>
+<p>Este README explica como configurar, executar e ajustar o projeto.</p>
+<h2 id="sumario">Sumário</h2>
+<ul>
+<li>Pré-requisitos</li>
+<li>Variáveis de ambiente (exemplo)</li>
+<li>Como executar (Docker e local)</li>
+<li>Adicionar documentos para RAG (vetorização)</li>
+<li>Qual modelo usar e recomendações</li>
+<li>Troubleshooting e notas</li>
+</ul>
+<h2 id="1-pre-requisitos">1) Pré-requisitos</h2>
+<ul>
+<li>Docker &amp; Docker Compose (recomendado para produção/testes locais consistentes)</li>
+<li>Python 3.11+ (para execução local)</li>
+<li>Chaves/credenciais da EvolutionAPI</li>
+<li>(Opcional) Conta/credenciais para provedores de modelos se for usar outros LLMs</li>
+</ul>
+<h2 id="2-variaveis-de-ambiente">2) Variáveis de ambiente</h2>
+<p>Crie um arquivo <code>.env</code> na raiz do projeto. Abaixo está um exemplo com variáveis detectadas no código — ajuste conforme necessário:</p>
+<div class="highlight"><pre><span></span><code># EvolutionAPI
+EVOLUTION_API_URL=http://localhost:8080/api
+EVOLUTION_INSTANCE_NAME=nome_da_instancia
+AUTHENTICATION_API_KEY=suachave_da_evolution
+
+# Groq (LLM) - usado pelo ChatGroq
+GROQ_MODEL_NAME=llama-3.3-70b-versatile (exemplo ou outro modelo Groq compatível)
+GROQ_MODEL_TEMPERATURE=0
+
+# Vetor store / RAG
+RAG_FILES_DIR=./rag_files
+VECTOR_STORE_PATH=./vectorstore_data
+
+# Redis (cache) — usado pelo docker-compose como `CACHE_REDIS_URI`
+CACHE_REDIS_URI=redis://redis:6379/0
+
+# Opcional: configura prompts via variáveis
+AI_CONTEXTUALIZE_PROMPT=&quot;Seu prompt de contextualização aqui&quot;
+AI_SYSTEM_PROMPT=&quot;Seu prompt de sistema (papel do assistente) aqui&quot;
+</code></pre></div>
+<p>Observações:
+- <code>EVOLUTION_INSTANCE_NAME</code> deve corresponder ao nome da instância configurada no painel da EvolutionAPI (Manager).
+- <code>EVOLUTION_API_URL</code> aponta para onde o serviço EvolutionAPI está escutando (no docker-compose padrão: http://localhost:8080/api).
+- <code>GROQ_MODEL_NAME</code> e <code>GROQ_MODEL_TEMPERATURE</code> controlam qual modelo Groq será usado pelo <code>langchain_groq.ChatGroq</code>.
+- <code>RAG_FILES_DIR</code> é a pasta onde você coloca PDFs e .txt para vetorização.</p>
+<h2 id="3-como-executar">3) Como executar</h2>
+<p>3.1 Usando Docker Compose (recomendado)</p>
+<ol>
+<li>Copie/exemplo e edite <code>.env</code>:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>.env.example<span class="w"> </span>.env<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+<span class="c1"># edite .env com suas chaves</span>
+</code></pre></div>
+<ol>
+<li>Suba os serviços:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
+<p>Serviços principais:
+- <code>evolution-api</code> — painel e gateway para WhatsApp
+- <code>bot</code> — aplicação FastAPI que expõe <code>/webhook</code>
+- <code>redis</code>, <code>postgres</code> — dependências do EvolutionAPI</p>
+<p>Depois que o painel do EvolutionAPI estiver no ar, adicione sua instância do WhatsApp no painel (Manager) e configure o webhook da instância para:</p>
+<div class="highlight"><pre><span></span><code>http://bot:8000/webhook
+</code></pre></div>
+<p>Habilite o evento <code>MESSAGES_UPSERT</code> para receber mensagens.</p>
+<p>3.2 Execução local (sem Docker)</p>
+<ol>
+<li>Crie e ative um virtualenv, instale dependências:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+<ol>
+<li>Exporte as variáveis de ambiente (ou use <code>.env</code> com python-dotenv) e rode o servidor:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># com uvicorn</span>
+uvicorn<span class="w"> </span>app:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+</code></pre></div>
+<p>Nota: se executar localmente, você ainda precisa de um EvolutionAPI acessível (pode rodar via docker-compose apenas o serviço <code>evolution-api</code>) e apontar <code>EVOLUTION_API_URL</code> para ele.</p>
+<h2 id="4-adicionar-documentos-para-rag">4) Adicionar documentos para RAG</h2>
+<ol>
+<li>Coloque arquivos PDF ou TXT dentro da pasta <code>rag_files/</code> na raiz do projeto.</li>
+<li>No próximo start do serviço <code>bot</code> (ou ao chamar o código manualmente), o módulo <code>vectorstore.py</code>:<ul>
+<li>vai carregar os documentos (PyPDFLoader / TextLoader),</li>
+<li>dividir em chunks (chunk_size=1000, overlap=200),</li>
+<li>gerar embeddings com <code>FastEmbedEmbeddings(model_name="BAAI/bge-base-en-v1.5")</code>,</li>
+<li>persistir no diretório indicado por <code>VECTOR_STORE_PATH</code> (ex: <code>./vectorstore_data</code>).</li>
+</ul>
+</li>
+</ol>
+<p>Os arquivos processados serão movidos para <code>rag_files/processed/</code>.</p>
+<p>Dica: para re-processar todos os documentos, remova ou renomeie a pasta <code>rag_files/processed</code> para que os arquivos voltem a ser lidos.</p>
+<h2 id="5-modelos-e-recomendacoes">5) Modelos e recomendações</h2>
+<ul>
+<li>LLM principal no projeto: ChatGroq (via <code>langchain_groq.ChatGroq</code>). A variável <code>GROQ_MODEL_NAME</code> define qual modelo Groq usar. Exemplos: <code>openai/gpt-oss-20b</code> (verifique disponibilidade/compatibilidade com sua conta Groq).</li>
+<li>Embeddings: <code>BAAI/bge-base-en-v1.5</code> via <code>FastEmbedEmbeddings</code> (bom trade-off entre custo e qualidade para embeddings).</li>
+<li>Vetor store: Chroma (persistência local em <code>VECTOR_STORE_PATH</code>).</li>
+</ul>
+<p>Sugestões:
+- Para conversas em português, teste a qualidade do modelo e ajuste <code>GROQ_MODEL_TEMPERATURE</code> (0.0-0.5 para respostas mais determinísticas).
+- Se quiser usar OpenAI ou outro provedor, será necessário adaptar <code>chains.py</code> para criar o LLM correspondente (por exemplo, <code>OpenAI</code> ou <code>ChatOpenAI</code>) e ajustar variáveis de ambiente.</p>
+<h2 id="6-estrutura-importante-de-arquivos">6) Estrutura importante de arquivos</h2>
+<ul>
+<li><code>app.py</code> — entrada FastAPI e webhook <code>/webhook</code> que processa eventos da EvolutionAPI.</li>
+<li><code>chains.py</code> — constrói o chain RAG com histórico, ChatGroq e retrieval.</li>
+<li><code>vectorstore.py</code> — carrega documentos, cria/salva Chroma e embeddings.</li>
+<li><code>evolution_api.py</code> — função <code>send_whatsapp_message</code> que chama a API Evolution para enviar respostas.</li>
+<li><code>prompts.py</code> — prompts usados nos fluxos (carregados de <code>AI_CONTEXTUALIZE_PROMPT</code> e <code>AI_SYSTEM_PROMPT</code>).</li>
+</ul>
+<h2 id="7-troubleshooting-notas">7) Troubleshooting / notas</h2>
+<ul>
+<li>Webhook 404/500: verifique se o container <code>bot</code> está rodando e expõe a porta 8000. Verifique logs do container:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>bot
+</code></pre></div>
+<ul>
+<li>Mensagens não chegam no bot: confirme que o webhook configurado na instância do EvolutionAPI está exatamente <code>http://bot:8000/webhook</code> (ou <code>http://localhost:8000/webhook</code> se exposto diretamente) e que <code>MESSAGES_UPSERT</code> está habilitado.</li>
+<li>Vetores não são encontrados / base vazia: verifique <code>VECTOR_STORE_PATH</code> e se o processo de vetorização foi executado. Logs ao iniciar o bot mostrarão a criação/persistência do Chroma.</li>
+<li>Problemas de credenciais: confirme <code>AUTHENTICATION_API_KEY</code> e <code>EVOLUTION_INSTANCE_NAME</code> no painel da EvolutionAPI.</li>
+</ul>
+<h2 id="8-como-contribuir">8) Como contribuir</h2>
+<ul>
+<li>Abra issues descrevendo bugs ou melhorias.</li>
+<li>Envie PRs com testes pequenos e documentação.</li>
+</ul>
+<h2 id="9-resumo-rapido-cheat-sheet">9) Resumo rápido (cheat sheet)</h2>
+<ul>
+<li>Subir tudo com Docker:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+<span class="c1"># editar .env</span>
+docker-compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
+<ul>
+<li>Executar localmente:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+uvicorn<span class="w"> </span>app:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
