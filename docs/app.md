@@ -2,6 +2,8 @@
 
 ::: config
 
+::: message_buffer
+
 ::: chains
 
 ::: vectorstore
