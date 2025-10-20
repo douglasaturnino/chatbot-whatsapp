@@ -9,14 +9,10 @@ from typing import Dict, Optional
 
 from fastapi import FastAPI, Request
 
-from chains import get_conversational_rag_chain
-from evolution_api import send_whatsapp_message
 from logger import logger
+from message_buffer import buffer_message
 
 app = FastAPI()
-
-conversational_rag_chain = get_conversational_rag_chain()
-logger.info("Convesational RAG chain inicializado")
 
 
 @app.post("/webhook")
@@ -45,24 +41,13 @@ async def webhook(request: Request) -> Dict[str, object]:
     message: Optional[str] = (
         data.get("data").get("message").get("conversation")
     )
-    push_name: Optional[str] = data.get("data").get("pushName")
 
     logger.info(
-        "Webhook recebido - remoteJid={}, pushName={}, conversation={}",
+        "Webhook recebido - remoteJid={}",
         chat_id,
-        push_name,
-        message,
     )
 
     if chat_id and message and from_me and "@g.us" not in chat_id:
-        ai_response: str = conversational_rag_chain.invoke(
-            input={"input": message},
-            config={"configurable": {"session_id": chat_id}},
-        )["answer"]
-        send_whatsapp_message(
-            number=chat_id,
-            text=ai_response,
-        )
-        logger.info("Resposta enviada para {}", chat_id)
+        await buffer_message(chat_id=chat_id, message=message)
 
     return {"status": "ok"}

@@ -28,3 +28,7 @@ EVOLUTION_AUTHENTICATION_API_KEY: Optional[str] = os.getenv(
 )
 
 REDIS_URL: Optional[str] = os.getenv("CACHE_REDIS_URI")
+
+BUFFER_KEY_SUFFIX: str = os.getenv("BUFFER_KEY_SUFFIX")
+DEBOUNCE_SECONDS: str = os.getenv("DEBOUNCE_SECONDS")
+BUFFER_TTL: str = os.getenv("BUFFER_TTL")
