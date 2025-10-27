@@ -1,5 +1,9 @@
 # Chatbot IA para WhatsApp (EvolutionAPI + LangChain)
 
+<div align='center'>
+<img src="https://github.com/user-attachments/assets/02e5c879-4a42-445a-a4cf-caa08001c7dd"  width=400px/>
+</div>
+
 Este repositório contém um chatbot para WhatsApp que integra:
 
 - EvolutionAPI (painel + gateway para WhatsApp)
